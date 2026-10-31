@@ -1,0 +1,24 @@
+{
+  "name": "Chef's Eye - AI Order Manager",
+  "short_name": "Chef's Eye",
+  "description": "AI-powered order management for chefs and restaurants",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f8fafc",
+  "theme_color": "#ea580c",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/icons/chefs-eye-logo-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icons/chefs-eye-logo.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}

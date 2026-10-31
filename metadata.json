@@ -1,0 +1,8 @@
+{
+  "name": "Copy of Chef's Eye - Order Manager",
+  "description": "AI-powered restaurant order management system. Upload handwritten notes or screenshots, and let Gemini parse them into structured orders.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone"
+  ]
+}

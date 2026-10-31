@@ -1,0 +1,106 @@
+
+<!DOCTYPE html>
+<html lang="en" class="h-full">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="theme-color" content="#f8fafc">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="Chef's Eye">
+    
+    <title>Chef's Eye - AI Order Manager</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="/icons/chefs-eye-logo-192.png">
+    <link rel="apple-touch-icon" href="/icons/chefs-eye-logo-192.png">
+    <link rel="manifest" href="/manifest.json">
+    <style>
+      html {
+        height: 100%;
+        overflow: hidden;
+      }
+      body {
+        font-family: 'Inter', sans-serif;
+        background-color: #f8fafc;
+        height: 100%;
+        overflow: hidden;
+        -webkit-overflow-scrolling: touch;
+        -webkit-tap-highlight-color: transparent;
+        transition: background-color 0.3s ease;
+      }
+      .dark body {
+        background-color: #020617;
+      }
+      /* Custom Scrollbar */
+      ::-webkit-scrollbar {
+        width: 8px;
+        height: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: transparent; 
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #cbd5e1; 
+        border-radius: 4px;
+      }
+      .dark ::-webkit-scrollbar-thumb {
+        background: #334155;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #94a3b8; 
+      }
+      
+      @keyframes slideInRight {
+        from { transform: translateX(100%); opacity: 0; }
+        to { transform: translateX(0); opacity: 1; }
+      }
+      .animate-slide-in-right {
+        animation: slideInRight 0.3s ease-out forwards;
+      }
+      
+      @keyframes fadeInUp {
+        from { transform: translate(-50%, 10px); opacity: 0; }
+        to { transform: translate(-50%, 0); opacity: 1; }
+      }
+      .animate-fade-in-up {
+        animation: fadeInUp 0.2s ease-out forwards;
+      }
+      
+      @keyframes fadeInUpLeft {
+        from { transform: translate(0, 10px); opacity: 0; }
+        to { transform: translate(0, 0); opacity: 1; }
+      }
+      .animate-fade-in-up-left {
+        animation: fadeInUpLeft 0.2s ease-out forwards;
+      }
+
+      .main-content-scroll {
+        min-height: 100vh;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script>
+      window.onerror = function(msg, url, lineNo, columnNo, error) {
+        var string = msg.toLowerCase();
+        var substring = "script error";
+        if (string.indexOf(substring) > -1){
+          alert('Script Error: See Browser Console for Detail');
+        } else {
+          var message = [
+            'Message: ' + msg,
+            'URL: ' + url,
+            'Line: ' + lineNo,
+            'Column: ' + columnNo,
+            'Error object: ' + JSON.stringify(error)
+          ].join(' - ');
+          alert(message);
+        }
+        return false;
+      };
+      console.log("Index.html loaded, starting script...");
+    </script>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>

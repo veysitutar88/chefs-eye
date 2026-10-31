@@ -1,0 +1,17 @@
+.env
+.env.*
+!.env.example
+data/
+orders.json
+node_modules/
+dist/
+.vercel/
+.worktrees/
+.playwright-mcp/
+.serena/
+.agents/
+.claude/
+*.local
+*.log
+
+.npm-cache/
